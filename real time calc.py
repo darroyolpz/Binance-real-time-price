@@ -1,5 +1,4 @@
 import json, requests, time, os
-import subprocess as sp
 
 # Data
 coin = 'BTC'
