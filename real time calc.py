@@ -1,12 +1,19 @@
 import json, requests, time, os
 
+# https://www.binance.com/en/trade/WRX_USDT
+
+'''
+Go to https://www.binance.com/en/trade/COIN_USDT and wait until at least 1m chart is available
+Otherwise you could be easily buying the top or losing a clear downside rejection
+'''
+
 # Data
-coin = 'BTC'
+coin = 'WRX'
 fees = 1-0.1/100
 url = 'https://api.binance.com/api/v3/ticker/price?symbol=' + coin + 'USDT'
 
 # Trades executed. Limit price and Amount
-trades = [[7784, 3000], [7654, 2000], [7600, 1000]]
+trades = [[0.06, 3000]]
 
 while True:
 
@@ -31,4 +38,4 @@ while True:
 
 	# Go to sleep
 	time.sleep(2)
-	os.system('clear')
+	#os.system('clear')
